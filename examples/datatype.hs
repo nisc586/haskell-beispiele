@@ -23,13 +23,13 @@ area (Circle r) = pi*r^2
 area (Square a) = a^2
 area (Rectangle a b) = a*b
 
--- area Circle 4 ergibt
--- area Square 3 ergibt
--- area Rectange 5 6 ergibt
--- area 3 ergibt error
+-- area (Circle 4) ergibt 50.265484
+-- area (Square 3) ergibt 9
+-- area (Rectange 5 6) ergibt 30
+-- area 3 ergibt error, weil 3 keine "Shape" ist
 
-circ:: Shape -> Float
-circ (Circle r) = 2*pi*r
-circ (Square a) = 4*a
-circ (Rectangle a b) = 2*a + 2*b
+circumference:: Shape -> Float
+circumference (Circle r) = 2*pi*r
+circumference (Square a) = 4*a
+circumference (Rectangle a b) = 2*a + 2*b
 
