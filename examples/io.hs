@@ -28,14 +28,14 @@ printTwo = putStrLn "Zeile 1" >>= (\ _ -> return "Zeile 2") >>= putStrLn
 {-- do-Schreibweise
 Alternative zu bind (>>=), funktioniert wie imperative Programmiersprache. Jede Zeile ist eins von:
 - eine Aktion
-- eine Bindung 
+- eine Bindung
 - return
 --}
 
 printReverse':: IO ()
 printReverse' = do
     s <- getLine
-    putStrLn foo (reverse s)
+    putStrLn (reverse s)
 
 
 myGetLine:: IO String
